@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
   color: #000;
+  word-break: keep-all;
 }
 [data-theme=dark] body {
   background-color: #000;
@@ -263,6 +264,32 @@ header {
   letter-spacing: -2px;
   background-color: #000;
 }
+.iphone__card-grid {
+  display: grid;
+  background-color: transparent !important;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "card-1 card-2" "card-3 card-2";
+}
+.iphone__card-grid > div {
+  padding: 10px;
+  background-color: #fff;
+}
+.iphone__card-grid > .iphone__card-balance {
+  grid-area: card-1;
+}
+.iphone__card-grid > .iphone__card-amount {
+  grid-area: card-2;
+  position: relative;
+}
+.iphone__card-grid > .iphone__card-amount > .iphone__accept {
+  position: absolute;
+  bottom: 10px;
+}
+.iphone__card-grid > .iphone__card-chart {
+  grid-area: card-3;
+}
 .iphone__round {
   position: relative;
   border-radius: 10px;
@@ -270,10 +297,15 @@ header {
 }
 .iphone__sub-title {
   font-size: 14px;
+  font-weight: 700;
 }
-.iphone__content {
+.iphone__text {
   font-weight: 700;
   font-size: 20px;
+}
+.iphone__comment {
+  color: #999;
+  font-size: 12px;
 }
 .iphone__round-btn {
   background-color: #eee;
@@ -310,8 +342,11 @@ header {
   padding: 10px;
   margin-bottom: 10px !important;
 }
-.iphone__latest-transaction p {
+.iphone__latest-transaction > p {
   font-size: 12px;
+}
+.iphone__saving {
+  background: url("../images/ico_chevron-right.svg") no-repeat 95%/15px;
 }
 
 .request__balance {
@@ -329,6 +364,11 @@ hr {
   float: left;
   padding: 5px;
   margin: 10px 10px 20px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile__card {
+  border-radius: 10px;
 }
 .profile__name > strong {
   font-size: 14px;
@@ -351,5 +391,10 @@ hr {
   height: 10px;
   display: inline-block;
   background: url("../images/ico_chevron-right.svg") no-repeat center/cover;
-  margin-left: 10px;
+}
+.profile__money span {
+  background-color: #eee;
+  color: #999;
+  padding: 0 5px;
+  font-size: 12px;
 }

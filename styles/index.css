@@ -1,0 +1,9 @@
+.payment__cash .iphone__card {
+  background: url("../images/appleCash.jpg") no-repeat 0/cover;
+}
+.payment__apple-card .iphone__card {
+  background: url("../images/appleCard.jpg") no-repeat 0/cover;
+}
+.payment__apple-card .iphone__card__grid {
+  display: grid;
+}

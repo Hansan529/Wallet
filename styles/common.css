@@ -7,16 +7,24 @@ body {
   color: #fff;
 }
 
-.logo {
-  max-width: 1800px;
-  width: 100%;
-  margin: 0 auto;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .logo {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .logo__title {
   width: 250px;
   height: 50px;
-  font-size: 32px;
   line-height: 50px;
+  font-size: 32px;
   text-indent: 50px;
   background: url("../images/ico_apple.logo.svg") no-repeat 0/contain;
 }
@@ -24,13 +32,26 @@ body {
   background-image: url("../images/ico_apple.logo--white.svg");
 }
 
+.close {
+  width: 15px;
+  height: 15px;
+  background: url("../images/ico_multiply.svg") no-repeat center/cover;
+}
+
 header {
   height: 100px;
   display: flex;
-  position: fixed;
+  position: sticky;
   top: 0;
+  background-color: #fff;
+  color: #000;
   align-items: center;
 }
+[data-theme=dark] header {
+  background-color: #666;
+  color: #fff;
+}
+
 .now {
   width: 900px;
   height: 900px;
@@ -48,11 +69,11 @@ header {
   color: #fff;
 }
 .now__main {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: 0.5s ease;
@@ -127,9 +148,208 @@ header {
 }
 .now__list > span {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .main {
-  margin-top: 100px;
+  width: 95%;
+  margin: 0 auto;
+}
+.main__center {
+  text-align: center;
+}
+
+.iphone {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #f3f3f3;
+  border-radius: 60px;
+  overflow: hidden;
+  max-width: 370px;
+}
+.iphone > img {
+  position: relative;
+  z-index: 1;
+  -webkit-clip-path: polygon(0% 0%, 0 100%, 8% 100%, 8% 5%, 92% 5%, 92% 95%, 7% 95%, 8% 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0 100%, 8% 100%, 8% 5%, 92% 5%, 92% 95%, 7% 95%, 8% 100%, 100% 100%, 100% 0%);
+}
+.iphone > * {
+  position: absolute;
+}
+.iphone__time {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-135px);
+}
+.iphone__status {
+  width: 15px;
+  display: flex;
+  top: 20px;
+  left: 50%;
+  transform: translateX(88px);
+  gap: 3px;
+  align-items: center;
+  font-size: 12px;
+}
+.iphone__title {
+  top: 65px;
+  left: 50%;
+  transform: translateX(-130px);
+  cursor: pointer;
+}
+.iphone__ico {
+  display: flex;
+  top: 65px;
+  left: 50%;
+  transform: translateX(90px);
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.iphone__ico img {
+  width: 20px;
+}
+.iphone__content {
+  width: 85%;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iphone__content > div {
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #000;
+}
+[data-theme=dark] .iphone__content > div {
+  background-color: #000;
+  color: #fff;
+}
+.iphone__content > h2 {
+  width: 95%;
+  margin: 0 auto;
+}
+.iphone__content > h2 > i {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url("../images/ico_filter.svg") no-repeat center/cover;
+  float: right;
+}
+.iphone__card {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 15px 0;
+  color: #fff !important;
+  border-radius: 10px !important;
+}
+.iphone__card .logo__title {
+  width: initial;
+  height: initial;
+  line-height: initial;
+  text-indent: 25px;
+  font-size: 22px;
+  background-image: url("../images/ico_apple.logo--white.svg");
+  background-color: #000;
+}
+.iphone__card > span {
+  font-size: 22px;
+  letter-spacing: -2px;
+  background-color: #000;
+}
+.iphone__round {
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+}
+.iphone__sub-title {
+  font-size: 14px;
+}
+.iphone__content {
+  font-weight: 700;
+  font-size: 20px;
+}
+.iphone__round-btn {
+  background-color: #eee;
+  color: #000;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+.iphone__balance--resReq {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+  z-index: 10;
+}
+[data-theme=dark] .iphone__balance--resReq {
+  background-color: #fff;
+  color: #000;
+}
+.iphone__request {
+  position: relative;
+  padding: 10px;
+}
+.iphone__request .profile__img {
+  margin-bottom: 30px;
+}
+.iphone__request .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.iphone__latest-transaction {
+  padding: 10px;
+  margin-bottom: 10px !important;
+}
+.iphone__latest-transaction p {
+  font-size: 12px;
+}
+
+.request__balance {
+  font-size: 14px;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.profile__img {
+  width: 40px;
+  background-color: #d8d8d9;
+  border-radius: 50%;
+  float: left;
+  padding: 5px;
+  margin: 10px 10px 20px 0;
+}
+.profile__name > strong {
+  font-size: 14px;
+}
+.profile__reasons {
+  font-size: 12px;
+  color: #999;
+}
+.profile__expires {
+  font-size: 12px;
+  color: #999;
+}
+.profile__money {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.profile__money i {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../images/ico_chevron-right.svg") no-repeat center/cover;
+  margin-left: 10px;
 }

@@ -1,12 +1,15 @@
-:is(.main__center, .payment) h2 {
+:is(.main__center, .payment) > h2 {
   font-size: 40px;
 }
 @media screen and (min-width: 1280px) {
-  :is(.main__center, .payment) h2 {
+  :is(.main__center, .payment) > h2 {
     font-size: 96px;
   }
 }
 
+.main {
+  background-color: #3496ca;
+}
 .main > section,
 .main > article {
   width: 95%;
@@ -39,6 +42,58 @@
   word-break: keep-all;
 }
 
+.payment .section-box {
+  background-color: #3496ca;
+  color: #16435a;
+}
+.payment .section-box span {
+  color: #fff;
+}
+.payment .themeColor {
+  color: #3295c9;
+}
+.payment__wrap {
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  padding: 40px 30px 20px;
+}
+[data-theme=dark] .payment__wrap {
+  background-color: #000;
+  color: #fff;
+}
+.payment__wrap h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+.payment__img {
+  margin: 20px 0;
+}
+.payment__img img {
+  width: 80%;
+  margin: 0 auto;
+}
+.payment__more {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.payment__more span {
+  font-size: 12px;
+}
+.payment__more button {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: no-repeat center/cover;
+}
+.payment__more + .payment__wrap {
+  display: none;
+}
+.payment__card .payment__more button {
+  background-image: url("../images/ico_plus-circle.svg");
+}
 .payment__cash .iphone__card {
   background: url("../images/appleCash.jpg") no-repeat 0/cover;
 }

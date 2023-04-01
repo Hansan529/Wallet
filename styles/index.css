@@ -1,3 +1,44 @@
+:is(.main__center, .payment) h2 {
+  font-size: 40px;
+}
+@media screen and (min-width: 1280px) {
+  :is(.main__center, .payment) h2 {
+    font-size: 96px;
+  }
+}
+
+.main > section,
+.main > article {
+  width: 95%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1280px) {
+  .main > section,
+  .main > article {
+    width: 100%;
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .main__center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    gap: 10px;
+    text-align: start;
+  }
+}
+.main__title {
+  width: 80%;
+}
+.main__text {
+  width: 90%;
+  word-break: keep-all;
+}
+
 .payment__cash .iphone__card {
   background: url("../images/appleCash.jpg") no-repeat 0/cover;
 }
@@ -5,5 +46,8 @@
   background: url("../images/appleCard.jpg") no-repeat 0/cover;
 }
 .payment__apple-card .iphone__card__grid {
+  display: grid;
+}
+.payment__membership > .payment__img {
   display: grid;
 }

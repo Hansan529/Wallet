@@ -10,6 +10,7 @@
 :is(.payment__wrap, .payment__text) > h2 {
   font-size: 32px;
   line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .main {
@@ -88,16 +89,10 @@
   width: 30px;
   height: 30px;
   display: block;
-  background: no-repeat center/cover;
+  background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
 }
 .payment__more + .payment__wrap {
   display: none;
-}
-.payment__card .payment__more button {
-  background-image: url("../images/ico_plus-circle.svg");
-}
-.payment__cash > .payment__text h2 {
-  margin-bottom: 20px;
 }
 .payment__cash .iphone__card {
   background: url("../images/appleCash.jpg") no-repeat 0/cover;
@@ -124,9 +119,6 @@
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
-}
-.payment__pay .payment__more button {
-  background-image: url("../images/ico_plus-circle--white.svg");
 }
 .payment__apple-card .iphone__card {
   background: url("../images/appleCard.jpg") no-repeat 0/cover;

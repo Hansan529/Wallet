@@ -29,7 +29,6 @@
     max-width: 1024px;
   }
 }
-
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .main__center {
     display: flex;
@@ -72,10 +71,6 @@
 .payment__img {
   margin: 20px 0;
 }
-.payment__img img {
-  width: 80%;
-  margin: 0 auto;
-}
 .payment__more {
   display: flex;
   justify-content: flex-end;
@@ -93,6 +88,10 @@
 }
 .payment__more + .payment__wrap {
   display: none;
+}
+.payment__card .payment__img img {
+  width: 80%;
+  margin: 0 auto;
 }
 .payment__cash .iphone__card {
   background: url("../images/appleCash.jpg") no-repeat 0/cover;
@@ -126,6 +125,10 @@
 .payment__apple-card .iphone__card__grid {
   display: grid;
 }
-.payment__membership > .payment__img {
-  display: grid;
+.payment__membership .payment__img .row {
+  display: flex;
+}
+.payment__membership .payment__img .row__space {
+  width: 88px;
+  height: 88px;
 }

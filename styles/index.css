@@ -7,6 +7,11 @@
   }
 }
 
+:is(.payment__wrap, .payment__text) > h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
 .main {
   background-color: #3496ca;
 }
@@ -63,18 +68,6 @@
   background-color: #000;
   color: #fff;
 }
-.payment__wrap h2 {
-  font-size: 32px;
-  line-height: 1.2;
-}
-.payment .dark__wrap {
-  background-color: #000;
-  color: #fff;
-}
-[data-theme=dark] .payment .dark__wrap {
-  background-color: #fff;
-  color: #000;
-}
 .payment__img {
   margin: 20px 0;
 }
@@ -103,8 +96,17 @@
 .payment__card .payment__more button {
   background-image: url("../images/ico_plus-circle.svg");
 }
+.payment__cash > .payment__text h2 {
+  margin-bottom: 20px;
+}
 .payment__cash .iphone__card {
   background: url("../images/appleCash.jpg") no-repeat 0/cover;
+  justify-content: flex-end;
+}
+.payment__cash .iphone__card > span {
+  position: relative;
+  top: -10px;
+  right: -5px;
 }
 .payment__pay .payment__ico-wrap {
   display: flex;

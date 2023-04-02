@@ -197,6 +197,9 @@ header {
 .dark__wrap .close {
   background-image: url("../images/ico_multiply--white.svg");
 }
+.dark__wrap .payment__more > button {
+  background-image: url("../images/ico_plus-circle--white.svg");
+}
 
 .iphone {
   width: 100%;

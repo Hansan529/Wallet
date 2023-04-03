@@ -172,6 +172,9 @@ header {
 .close {
   width: 15px;
   height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   background: url("../images/ico_multiply.svg") no-repeat center/cover;
 }
 
@@ -211,6 +214,7 @@ header {
   border-radius: 60px;
   overflow: hidden;
   max-width: 370px;
+  margin: 20px 0;
 }
 .iphone > img {
   position: relative;
@@ -250,7 +254,7 @@ header {
   flex-direction: row-reverse;
   gap: 15px;
 }
-.iphone__ico img {
+.iphone__ico > li {
   width: 20px;
 }
 .iphone__content {
@@ -290,6 +294,7 @@ header {
   padding: 15px 15px 0;
   color: #fff !important;
   border-radius: 10px !important;
+  background: no-repeat 0/cover;
 }
 .iphone__card .logo__title {
   width: initial;
@@ -371,11 +376,6 @@ header {
 }
 .iphone__request .profile__img {
   margin-bottom: 30px;
-}
-.iphone__request .close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
 }
 .iphone__latest-transaction {
   padding: 10px;

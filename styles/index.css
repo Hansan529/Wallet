@@ -1,13 +1,16 @@
-:is(.main__center, .payment) > h2 {
+:is(.main__center, article) > h2 {
   font-size: 40px;
 }
 @media screen and (min-width: 1280px) {
-  :is(.main__center, .payment) > h2 {
+  :is(.main__center, article) > h2 {
     font-size: 96px;
   }
 }
+:is(.main__center, article) > h2 > span {
+  color: #fff;
+}
 
-:is(.payment__wrap, .payment__text) > h2 {
+:is(.payment__wrap, .identity__wrap, .payment__text, .identity__text) > h2 {
   font-size: 32px;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -47,24 +50,23 @@
   word-break: keep-all;
 }
 
-.payment .section-box {
-  background-color: #3496ca;
+.payment .themeColor {
   color: #16435a;
 }
-.payment .section-box span {
-  color: #fff;
+.payment__title {
+  background-color: #3496ca;
+  color: #16435a;
+  border-radius: 30px;
+  padding: 30px;
 }
-.payment .themeColor {
-  color: #3295c9;
-}
-.payment__wrap {
+.payment__wrap, .identity__wrap {
   background-color: #fff;
   color: #000;
   border-radius: 30px;
   padding: 40px 30px 20px;
   margin: 20px 0;
 }
-[data-theme=dark] .payment__wrap {
+[data-theme=dark] .payment__wrap, [data-theme=dark] .identity__wrap {
   background-color: #000;
   color: #fff;
 }
@@ -86,7 +88,7 @@
   display: block;
   background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
 }
-.payment__more + .payment__wrap {
+.payment__more + .payment__wrap, .payment__more + .identity__wrap {
   display: none;
 }
 .payment__card .payment__img img {
@@ -94,7 +96,7 @@
   margin: 0 auto;
 }
 .payment__cash .iphone__card {
-  background: url("../images/appleCash.jpg") no-repeat 0/cover;
+  background-image: url("../images/appleCash.jpg");
   justify-content: flex-end;
 }
 .payment__cash .iphone__card > span {
@@ -120,7 +122,7 @@
   margin-bottom: 10px;
 }
 .payment__apple-card .iphone__card {
-  background: url("../images/appleCard.jpg") no-repeat 0/cover;
+  background-image: url("../images/appleCard.jpg");
 }
 .payment__apple-card .iphone__card__grid {
   display: grid;
@@ -131,4 +133,48 @@
 .payment__membership .payment__img .row__space {
   width: 88px;
   height: 88px;
+}
+
+.identity .themeColor {
+  color: #fbae04;
+}
+.identity__title {
+  background-color: #fbae04;
+  color: #835a00;
+  border-radius: 30px;
+  padding: 30px;
+}
+.identity__driver .iphone__card {
+  background-image: url("../../images/driverlicense-bg.png");
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+.identity__driver .iphone__card p {
+  color: #333;
+}
+.identity__driver .iphone__card p.card__title {
+  grid-column: 1/3;
+}
+.identity__driver .iphone__card p.card__name {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+.identity__driver .iphone__license img {
+  width: 45px;
+  float: left;
+  margin-right: 10px;
+}
+.identity__driver .iphone__identity {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff url("../../images/ico_faceid.svg") no-repeat center/60px;
 }

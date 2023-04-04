@@ -10,9 +10,10 @@
   color: #fff;
 }
 
-:is(.payment__wrap, .transit__wrap, .identity__wrap,
+:is(.payment__wrap, .identity__wrap,
 .payment__text,
 .identity__text,
+.transit__wrap,
 .transit__text) > h2 {
   font-size: 32px;
   line-height: 1.2;
@@ -81,14 +82,14 @@
   border-radius: 30px;
   padding: 30px;
 }
-.payment__wrap, .transit__wrap, .identity__wrap {
+.payment__wrap, .identity__wrap {
   background-color: #fff;
   color: #000;
   border-radius: 30px;
   padding: 40px 30px 20px;
   margin: 20px 0;
 }
-[data-theme=dark] .payment__wrap, [data-theme=dark] .transit__wrap, [data-theme=dark] .identity__wrap {
+[data-theme=dark] .payment__wrap, [data-theme=dark] .identity__wrap {
   background-color: #000;
   color: #fff;
 }
@@ -207,95 +208,4 @@
 .identity__student .identity__img > img {
   width: 80%;
   margin: 0 auto;
-}
-
-.transit .themeColor {
-  color: #50be3e;
-}
-.transit__express {
-  position: relative;
-  height: 400px;
-  background: url("../images/transit-bg.svg") no-repeat -50px 60%/160%;
-}
-.transit__express .transit__text {
-  height: 90%;
-  display: flex;
-  align-items: flex-end;
-}
-.transit__express .more__btn {
-  flex-direction: row-reverse;
-}
-.transit .ticket-air {
-  position: relative;
-  border: 2px solid #000;
-  border-radius: 20px;
-  padding: 20px;
-  padding-bottom: 200px;
-  overflow: hidden;
-}
-.transit .ticket-air__logo {
-  float: left;
-  width: 80px;
-  height: 20px;
-  background: url("../images/logo_Asiana_Airlines.svg") no-repeat center/contain;
-}
-.transit .ticket-air__time {
-  text-align: end;
-  font-size: 18px;
-  font-weight: bold;
-}
-.transit .ticket-air__time > p {
-  font-size: 12px;
-}
-.transit .ticket-air__nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-}
-.transit .ticket-air__nav > div > p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.transit .ticket-air__nav > div > h2 {
-  font-size: 26px;
-}
-.transit .ticket-air__nav-starting {
-  width: 40%;
-}
-.transit .ticket-air__nav-airplane {
-  width: 40px;
-  display: block;
-  background: url("../images/ticket-air.png") no-repeat -40px center/200%;
-  margin: 0 10px;
-}
-.transit .ticket-air__nav-arrived {
-  width: 40%;
-}
-.transit .ticket-air__nav-arrived h2 {
-  text-align: end;
-}
-.transit .ticket-air__grid-wrap {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 30% 1fr 15% 15%;
-  grid-template-rows: 1fr 1fr;
-}
-.transit .ticket-air__grid-wrap .ticket-air__class {
-  grid-column: 2/4;
-}
-.transit .ticket-air__dot {
-  display: flex;
-  justify-content: space-between;
-  width: 104%;
-  position: absolute;
-  top: 130px;
-  left: -2%;
-}
-.transit .ticket-air__dot > i {
-  width: 10px;
-  height: 10px;
-  display: block;
-  border-radius: 50%;
-  background-color: #000;
 }

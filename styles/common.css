@@ -179,7 +179,7 @@ header {
 }
 
 .dark__wrap {
-  background-color: #000 !important;
+  background-color: #222 !important;
   color: #fff !important;
 }
 [data-theme=dark] .dark__wrap {
@@ -197,11 +197,11 @@ header {
   background-color: #fff;
   color: #000;
 }
+.dark__wrap .more__btn button {
+  background-image: url("../images/ico_plus-circle--white.svg");
+}
 .dark__wrap .close {
   background-image: url("../images/ico_multiply--white.svg");
-}
-.dark__wrap .payment__more > button {
-  background-image: url("../images/ico_plus-circle--white.svg");
 }
 
 .iphone {

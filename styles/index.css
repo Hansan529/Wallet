@@ -10,7 +10,11 @@
   color: #fff;
 }
 
-:is(.payment__wrap, .identity__wrap, .payment__text, .identity__text) > h2 {
+:is(.payment__wrap, .identity__wrap,
+.payment__text,
+.identity__text,
+.transit__wrap,
+.transit__text) > h2 {
   font-size: 32px;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -50,8 +54,27 @@
   word-break: keep-all;
 }
 
+.more__btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.more__btn span {
+  font-size: 12px;
+}
+.more__btn button {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
+}
+.more__btn + div {
+  display: none;
+}
+
 .payment .themeColor {
-  color: #16435a;
+  color: #3496ca;
 }
 .payment__title {
   background-color: #3496ca;
@@ -73,30 +96,12 @@
 .payment__img {
   margin: 20px 0;
 }
-.payment__more {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-}
-.payment__more span {
-  font-size: 12px;
-}
-.payment__more button {
-  width: 30px;
-  height: 30px;
-  display: block;
-  background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
-}
-.payment__more + .payment__wrap, .payment__more + .identity__wrap {
-  display: none;
-}
 .payment__card .payment__img img {
   width: 80%;
   margin: 0 auto;
 }
 .payment__cash .iphone__card {
-  background-image: url("../images/appleCash.jpg");
+  background-image: url("../images/payment__appleCash.jpg");
   justify-content: flex-end;
 }
 .payment__cash .iphone__card > span {
@@ -122,7 +127,7 @@
   margin-bottom: 10px;
 }
 .payment__apple-card .iphone__card {
-  background-image: url("../images/appleCard.jpg");
+  background-image: url("../images/payment__appleCard.jpg");
 }
 .payment__apple-card .iphone__card__grid {
   display: grid;
@@ -177,4 +182,30 @@
   padding: 15px;
   border-radius: 10px;
   background: #fff url("../../images/ico_faceid.svg") no-repeat center/60px;
+}
+.identity__employee .iphone__content {
+  top: 80px;
+}
+.identity__employee .iphone__content .iphone__card {
+  background-image: url("../images/employee__badge.jpg");
+}
+.identity__employee .iphone .nfc-reader {
+  background-color: transparent;
+  text-align: center;
+  color: #ccc;
+}
+.identity__employee .iphone .nfc-reader .nfc-phone {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #086fff;
+  border-radius: 50%;
+  background: url("../../images/ico_iphone.gen2.svg") no-repeat center 15px/60%;
+  margin: 0 auto 20px;
+}
+.identity__student .identity__img {
+  padding: 20px 0;
+}
+.identity__student .identity__img > img {
+  width: 80%;
+  margin: 0 auto;
 }

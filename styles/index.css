@@ -29,7 +29,8 @@
 }
 
 .main {
-  background-color: #3496ca;
+  background-color: #d9d6cc;
+  transition: 0.5s;
 }
 .main > section,
 .main > article {
@@ -44,15 +45,13 @@
     max-width: 1024px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 767px) {
-  .main__center {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: calc(100vh - 50px);
-    gap: 10px;
-    text-align: start;
-  }
+.main__center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 50px);
+  gap: 10px;
+  text-align: start;
 }
 .main__title {
   width: 80%;

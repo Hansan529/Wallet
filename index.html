@@ -243,9 +243,7 @@
               <div class="iphone__balance iphone__round">
                 <p class="iphone__sub-title">잔액</p>
                 <p class="iphone__cash">134,263원</p>
-                <button class="iphone__balance--resReq iphone__round-btn">
-                  송금 또는 수취
-                </button>
+                <button class="iphone__round-btn">송금 또는 수취</button>
               </div>
               <div class="iphone__request">
                 <img
@@ -325,20 +323,20 @@
             </ul>
             <div class="iphone__content">
               <div class="iphone__card"></div>
-              <div class="iphone__card-grid">
-                <div class="iphone__card-balance iphone__round">
+              <div class="iphone__card-grid iphone__card-grid-right-row2">
+                <div class="iphone__card-left-top iphone__round">
                   <p class="iphone__sub-title">카드 잔액</p>
                   <p class="iphone__text">4,274,009원</p>
                   <p class="iphone__comment">14,900,000원 사용 가능</p>
                 </div>
-                <div class="iphone__card-amount iphone__round">
+                <div class="iphone__card-right-2 iphone__round">
                   <p class="iphone__sub-title">결제 명세서</p>
                   <p class="iphone__text">6일 뒤에 결제 예정</p>
                   <button class="iphone__accept iphone__round-btn">
                     즉시 결제
                   </button>
                 </div>
-                <div class="iphone__card-chart iphone__round">
+                <div class="iphone__card-left-bottom iphone__round">
                   <p class="iphone__sub-title">주간 활동</p>
                   <p class="iphone__comment">평소보다 +23,000원</p>
                   <div class="iphone__chart-list"></div>
@@ -574,8 +572,10 @@
               일원입니다.
             </h2>
           </div>
-          <div class="identity__img">
-            <img src="./images/watch-univ.png" alt="애플워치" />
+          <div class="watch">
+            <div class="watch__card">
+              <h2>한산</h2>
+            </div>
           </div>
           <div class="more__btn">
             <span>학생증 추가 방법</span><button></button>
@@ -713,8 +713,11 @@
           </div>
           <div class="more__btn"><span></span><button></button></div>
         </section>
-        <section class="transit__wrap transit__movieEvent">
-          <div class="transit__img"></div>
+        <section class="transit__wrap transit__movieEvent dark__wrap">
+          <div class="watch">
+            <p>탭하여 세부사항 보기</p>
+            <div class="watch__card"></div>
+          </div>
           <div class="transit__text">
             <h2>
               영화관과 콘서트 <br />간편하게 보여주세요. 그리고 입장하세요
@@ -763,11 +766,7 @@
                   <img src="./images/ico_ellipsis--white.svg" alt="더보기" />
                 </button>
               </li>
-              <li>
-                <button>
-                  <img src="./images/ico_search--white.svg" alt="검색" />
-                </button>
-              </li>
+              <li class="blank"></li>
             </ul>
             <div class="iphone__content">
               <div class="iphone__card">
@@ -791,11 +790,146 @@
               발전한 키입니다.
             </h2>
           </div>
-          <div class="more__btn"><span></span><button></button></div>
+          <div class="iphone">
+            <img src="./images/iphone.png" alt="아이폰" />
+            <p class="iphone__time">16:54</p>
+            <div class="iphone__status">
+              <img src="./images/ico_cellularbars.svg" alt="데이터 품질" />
+              <img src="./images/ico_wifi.svg" alt="와이파이" />
+              <span>80%</span>
+            </div>
+            <h2 class="iphone__title">이전</h2>
+            <ul class="iphone__ico">
+              <li>
+                <button>
+                  <img src="./images/ico_ellipsis.svg" alt="더보기" />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="./images/ico_creditcardText.svg" alt="카드 번호" />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="./images/ico_search.svg" alt="검색" />
+                </button>
+              </li>
+            </ul>
+            <div class="iphone__content">
+              <div class="iphone__card">
+                <p>Modle X</p>
+              </div>
+              <div class="iphone__card-grid">
+                <div class="iphone__card-left-top iphone__round">
+                  <p class="iphone__sub-title">차량 잠금</p>
+                  <p class="iphone__comment">해제</p>
+                </div>
+                <div class="iphone__card-right-2 iphone__round">
+                  <p class="iphone__sub-title">트렁크</p>
+                  <p class="iphone__comment">닫힘</p>
+                </div>
+                <div class="iphone__card-left-bottom iphone__round">
+                  <p class="iphone__sub-title">경적</p>
+                  <p class="iphone__comment">OFF</p>
+                </div>
+                <div class="iphone__card-right-bottom iphone__round">
+                  <p class="iphone__sub-title">원격 시동</p>
+                  <p class="iphone__comment">시동 꺼짐</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="more__btn">
+            <span>디지털키 추가하는 방법</span><button></button>
+          </div>
         </section>
       </article>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="inner">
+        <ol class="precautions">
+          <li>
+            애플 캐시 서비스는 FDIC 회원인 그린 닷 은행에서 제공합니다. 이용
+            약관에 대해 더 알아보세요. 미국에서만 적격 장치에서 사용할 수
+            있습니다. Apple Cash 계좌로 돈을 보내고 받으려면, 18세이고 미국
+            거주자여야 합니다. 18세 미만인 경우, 가족 대표는 Apple Cash Family
+            계정의 일부로 Apple Cash를 설정할 수 있습니다. 보안 검사는 자금을
+            사용할 수 있도록 더 많은 시간이 필요할 수 있습니다. Apple Cash
+            Family 계정은 거래당 또는 7일 이내에 최대 2000달러를 보내거나 받을
+            수 있습니다. 지갑에서 돈을 보내려면 iOS 15.5 이상이 필요합니다.
+          </li>
+          <li>
+            ACMI 이외의 애플 카드의 가변 APR은 신용도에 따라 15.49%에서
+            26.49%입니다. 2023년 3월 1일 기준 요금.
+          </li>
+          <li>
+            일부 프로그램에서만 사용할 수 있습니다. iOS 9 이상이 설치된 iPhone 6
+            이상이 필요합니다.
+            <abbr
+              title="iPhone 6, iPhone SE 이후 출시된 모든 업데이트 완료한 iPhone에 해당됩니다."
+              >자세한 내용은 여기를</abbr
+            >
+            보세요.
+          </li>
+          <li>
+            지갑의 ID 카드는 현재 일부 TSA 체크포인트의 일부 주에서 사용할 수
+            있습니다. 여행객들은 이용 가능 여부를 확인하기 위해 검문소 표지판을
+            참조해야 합니다. iOS 15.4 이상이 설치된 iPhone 8 이상이 필요합니다.
+            watchOS 8.4 이상이 설치된 Apple Watch Series 4 이상에서 사용할 수
+            있습니다. <span>자세한 내용은 여기를</span> 보세요.
+          </li>
+          <li>
+            일부 회사에서만 이용 가능합니다. 적격 장치와 OS 버전이 필요합니다.
+          </li>
+          <li>
+            일부 학교에서만 이용 가능합니다. 적격 장치와 OS 버전이 필요합니다.
+            <span>자세한 내용은 여기를</span> 보세요.
+          </li>
+          <li>
+            일부 도시와 교통 시스템에서만 이용 가능합니다. 적격 장치와 OS 버전이
+            필요합니다. <span>자세한 내용은 여기를</span> 보세요.
+          </li>
+          <li>
+            iOS 9 이상이 설치된 iPhone 6 이상이 필요합니다. 자세한 내용은 여기를
+            보세요.
+          </li>
+          <li>
+            일부 주택 잠금 장치와 속성에서만 사용할 수 있습니다. 적격 장치와 OS
+            버전이 필요합니다.
+          </li>
+          <li>
+            일부 호텔에서만 이용 가능합니다. 적격 장치와 OS 버전이 필요합니다.
+          </li>
+          <li>
+            일부 제조사와 모델에서만 사용할 수 있습니다. 적격 장치와 OS 버전이
+            필요합니다. <span>자세한 내용은 여기를</span> 보세요.
+          </li>
+        </ol>
+        <hr />
+        <div class="foot__nav">
+          <div class="foot__nav-link">
+            <a>대한민국</a>
+            <span>Copyright &copy; 2023 Apple Inc. 모든 권리 보유.</span>
+            <ul class="foot__nav-list">
+              <li>개인정보 처리방침</li>
+              <li>웹 사이트 이용 약관</li>
+              <li>판매 및 환불</li>
+              <li>법적 고지</li>
+              <li>사이트 맵</li>
+            </ul>
+          </div>
+          <p class="foot__nav-info">
+            <span>사업자등록번호 : 123-45-67890 |</span>
+            <span>통신판매업신고번호 : 제 2023-서울당산-0001호 |</span>
+            <span>대표이사 : HAN SAN |</span>
+            <span>주소 : 서울 특별시 영등포구 양평로12길 10-8 |</span>
+            <span>대표전화 : 02-1234-5678 |</span>
+            <span>팩스 : 02-8765-0000</span>
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="./scripts/common.js"></script>
     <script src="./scripts/index.js"></script>
   </body>

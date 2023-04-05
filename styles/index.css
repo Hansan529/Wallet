@@ -129,9 +129,6 @@
 .payment__apple-card .iphone__card {
   background-image: url("../images/payment__appleCard.jpg");
 }
-.payment__apple-card .iphone__card__grid {
-  display: grid;
-}
 .payment__membership .payment__img .row {
   display: flex;
 }
@@ -202,12 +199,8 @@
   background: url("../images/ico_iphone.gen2.svg") no-repeat center 15px/60%;
   margin: 0 auto 20px;
 }
-.identity__student .identity__img {
-  padding: 20px 0;
-}
-.identity__student .identity__img > img {
-  width: 80%;
-  margin: 0 auto;
+.identity__student .watch__card {
+  background: #000 url("../images/watch-university.svg") no-repeat 20px center/40%;
 }
 
 .transit .themeColor {
@@ -321,6 +314,18 @@
 .transit__pass .iphone__check {
   background-color: transparent;
 }
+.transit__movieEvent .watch {
+  flex-direction: column;
+  justify-content: center;
+}
+.transit__movieEvent .watch .watch__card {
+  height: 150px;
+}
+.transit__movieEvent .watch .watch__card > p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 .security .themeColor {
   color: #f26d60;
@@ -331,32 +336,37 @@
   border-radius: 30px;
   padding: 30px;
 }
-.security .iphone__card {
+.security__hotel .iphone__card {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 20% 1fr;
   background-image: url("../../images/security-hotel-bg.jpg");
 }
-.security .iphone__card > h2 {
+.security__hotel .iphone__card > h2 {
   width: 80px;
   height: 20px;
   background: url("../images/security-hotel-logo.svg") no-repeat 0/contain;
 }
-.security .iphone__card > p:first-of-type {
+.security__hotel .iphone__card > p:first-of-type {
   text-align: end;
   font-size: 8px;
 }
-.security .iphone__card > p:first-of-type > strong {
+.security__hotel .iphone__card > p:first-of-type > strong {
   font-size: 12px;
 }
-.security .iphone__card > p:last-of-type {
+.security__hotel .iphone__card > p:last-of-type {
   font-size: 12px;
   grid-column: 1/3;
   text-shadow: 2px 2px 10px #000;
 }
-.security .iphone__round-btn {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
+.security__car .iphone__ico {
+  transform: translateX(20px);
+}
+.security__car .iphone__card {
+  background: url("../images/logo_tesla.svg") no-repeat 10% 10%/20px, url("../images/security-car-bg.jpg") no-repeat center/cover;
+  text-align: end;
+  color: #fff;
+}
+.security__car .iphone__card > p {
+  width: 100%;
 }

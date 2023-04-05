@@ -20,6 +20,14 @@
   margin-bottom: 20px;
 }
 
+:is(.payment__img, .identity__img, .transit__img, .security__img) {
+  margin: 20px 0;
+}
+:is(.payment__img, .identity__img, .transit__img, .security__img) img {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .main {
   background-color: #3496ca;
 }
@@ -92,13 +100,6 @@
 [data-theme=dark] .payment__wrap, [data-theme=dark] .security__wrap, [data-theme=dark] .transit__wrap, [data-theme=dark] .identity__wrap {
   background-color: #000;
   color: #fff;
-}
-.payment__img {
-  margin: 20px 0;
-}
-.payment__card .payment__img img {
-  width: 80%;
-  margin: 0 auto;
 }
 .payment__cash .iphone__card {
   background-image: url("../images/payment__appleCash.jpg");
@@ -320,6 +321,7 @@
 }
 .transit__movieEvent .watch .watch__card {
   height: 150px;
+  background: url("../images/transit_movieEvent-bg.png") no-repeat center/contain;
 }
 .transit__movieEvent .watch .watch__card > p {
   width: 100%;

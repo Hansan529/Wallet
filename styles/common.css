@@ -169,15 +169,6 @@ header {
   z-index: 1;
 }
 
-.close {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: url("../images/ico_multiply.svg") no-repeat center/cover;
-}
-
 .dark__wrap {
   background-color: #222 !important;
   color: #fff !important;
@@ -202,6 +193,19 @@ header {
 }
 .dark__wrap .close {
   background-image: url("../images/ico_multiply--white.svg");
+}
+
+.main {
+  padding-bottom: 50px;
+}
+
+.close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: url("../images/ico_multiply.svg") no-repeat center/cover;
 }
 
 .iphone {
@@ -256,6 +260,10 @@ header {
 }
 .iphone__ico > li {
   width: 20px;
+}
+.iphone__ico > li > button {
+  width: 100%;
+  height: 100%;
 }
 .iphone__content {
   width: 85%;
@@ -314,24 +322,29 @@ header {
   gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "card-1 card-2" "card-3 card-2";
 }
 .iphone__card-grid > div {
   padding: 10px;
   background-color: #fff;
 }
-.iphone__card-grid > .iphone__card-balance {
+.iphone__card-grid-right-row2 {
+  grid-template-areas: "card-1 card-row2" "card-3 card-row2";
+}
+.iphone__card-grid-right-row2 .iphone__card-left-top {
   grid-area: card-1;
 }
-.iphone__card-grid > .iphone__card-amount {
-  grid-area: card-2;
+.iphone__card-grid-right-row2 .iphone__card-right-2 {
+  grid-area: card-row2;
   position: relative;
 }
-.iphone__card-grid > .iphone__card-amount > .iphone__accept {
-  position: absolute;
+.iphone__card-grid-right-row2 .iphone__card-right-2 > .iphone__accept {
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
   bottom: 10px;
 }
-.iphone__card-grid > .iphone__card-chart {
+.iphone__card-grid-right-row2 .iphone__card-right-2 .iphone__card-left-bottom {
   grid-area: card-3;
 }
 .iphone__round {
@@ -355,19 +368,14 @@ header {
   color: #000;
   border-radius: 20px;
   padding: 5px 20px;
-}
-.iphone__balance--resReq {
-  background-color: #000;
-  color: #fff;
   position: absolute;
   top: 50%;
   right: 15px;
-  transform: translate(0, -50%);
-  z-index: 10;
+  transform: translateY(-50%);
 }
-[data-theme=dark] .iphone__balance--resReq {
-  background-color: #fff;
-  color: #000;
+[data-theme=dark] .iphone__round-btn {
+  background-color: #000;
+  color: #fff;
 }
 .iphone__request {
   position: relative;
@@ -452,4 +460,80 @@ hr {
   color: #999;
   padding: 0 5px;
   font-size: 12px;
+}
+
+.watch {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
+  background: url("../images/watch.svg") no-repeat 65% 0/contain;
+}
+.watch__card {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer .inner {
+  width: 95%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.precautions {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+.precautions > li {
+  list-style: decimal;
+  margin-bottom: 10px;
+}
+
+.foot__nav-link > a {
+  display: block;
+  margin: 15px 0;
+}
+.foot__nav-link .foot__nav-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+.foot__nav-link .foot__nav-list > li {
+  position: relative;
+  color: #333;
+  margin-right: 15px;
+}
+.foot__nav-link .foot__nav-list > li::after {
+  content: "";
+  width: 1px;
+  height: 70%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -7px;
+  transform: translateY(-50%);
+  background-color: #333;
+}
+.foot__nav-link .foot__nav-list > li:last-child::after {
+  display: none;
+}
+.foot__nav-info {
+  font-size: 11px;
+}
+.foot__nav-info span {
+  white-space: nowrap;
+}
+.foot__nav-info span:first-child, .foot__nav-info span:last-child {
+  display: block;
 }

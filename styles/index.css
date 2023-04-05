@@ -216,6 +216,12 @@
 .transit .themeColor {
   color: #50be3e;
 }
+.transit__title {
+  background-color: #50be3e;
+  color: #29631f;
+  border-radius: 30px;
+  padding: 30px;
+}
 .transit__express {
   position: relative;
   height: 400px;

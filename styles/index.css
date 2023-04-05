@@ -23,7 +23,7 @@
 :is(.payment__img, .identity__img, .transit__img, .security__img) {
   margin: 20px 0;
 }
-:is(.payment__img, .identity__img, .transit__img, .security__img) img {
+:is(.payment__img, .identity__img, .transit__img, .security__img) > img {
   width: 80%;
   margin: 0 auto;
 }
@@ -127,11 +127,20 @@
      object-fit: contain;
   margin-bottom: 10px;
 }
+.payment__pay .payment__ico-wrap .payment__ico:first-child i {
+  width: 100%;
+  height: 65px;
+  display: block;
+  margin-bottom: 10px;
+  background: url("../images/ico_pay--more.png") no-repeat 0 0/200%;
+}
 .payment__apple-card .iphone__card {
   background-image: url("../images/payment__appleCard.jpg");
 }
 .payment__membership .payment__img .row {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .payment__membership .payment__img .row__space {
   width: 88px;

@@ -292,7 +292,7 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px 15px 0;
-  color: #fff !important;
+  color: #fff;
   border-radius: 10px !important;
   background: no-repeat 0/cover;
 }
@@ -341,11 +341,10 @@ header {
 }
 .iphone__sub-title {
   font-size: 14px;
-  font-weight: 700;
 }
 .iphone__text {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 .iphone__comment {
   color: #999;
@@ -384,8 +383,24 @@ header {
 .iphone__latest-transaction > p {
   font-size: 12px;
 }
-.iphone__saving {
-  background: url("../images/ico_chevron-right.svg") no-repeat 95%/15px;
+.iphone__saving button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: url("../images/ico_chevron.png") -400px 0/cover;
+}
+.iphone__check {
+  text-align: center;
+}
+.iphone__check i {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 10px;
+  background: url("../images/ico_checkmark.circle.svg") no-repeat center/cover;
 }
 
 .request__balance {
@@ -430,7 +445,7 @@ hr {
   width: 10px;
   height: 10px;
   display: inline-block;
-  background: url("../images/ico_chevron-right.svg") no-repeat center/cover;
+  background: url("../images/ico_chevron.png") no-repeat -400px 0/cover;
 }
 .profile__money span {
   background-color: #eee;

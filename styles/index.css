@@ -249,7 +249,7 @@
   background-image: url("../images/employee__badge.jpg");
 }
 .identity__employee .iphone .nfc-reader {
-  background-color: transparent;
+  background-color: transparent !important;
   text-align: center;
   color: #ccc;
 }

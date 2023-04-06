@@ -53,9 +53,9 @@ moreCloseBtn.forEach((btn) => {
 
     /** 반응형 사이즈 체크후, 맞다면 하단의 실행문을 이행함 */
     if (mediaQueryMobile.matches || mediaQueryTablet.matches) {
-      if (currentScroll >= 500 && currentScroll < 4100) {
+      if (currentScroll >= 500 && currentScroll < 4000) {
         setBackground("#3496ca");
-      } else if (currentScroll >= 4100 && currentScroll < 6500) {
+      } else if (currentScroll >= 4000 && currentScroll < 6500) {
         setBackground("#fbae04");
       } else if (currentScroll >= 6500 && currentScroll < 9400) {
         setBackground("#50be3e");

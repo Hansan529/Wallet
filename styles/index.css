@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :is(.main__center, article) > h2 {
-  font-size: 40px;
+  font-size: 36px;
 }
 @media screen and (min-width: 1280px) {
   :is(.main__center, article) > h2 {
@@ -71,6 +71,11 @@
   height: 30px;
   display: block;
   background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
+}
+.more__btn img {
+  width: 120px;
+  display: inline;
+  margin-left: 10px;
 }
 
 /** 모든 wrap 태그가 참조하고 있는 스타일 */
@@ -265,7 +270,7 @@
   height: 100%;
   align-items: flex-end;
 }
-.identity__driver .iphone__license img {
+.identity__driver .iphone__license img, .identity__driver .iphone__citizen img {
   width: 45px;
   float: left;
   margin-right: 10px;
@@ -324,6 +329,87 @@
 }
 .transit__express .more__btn {
   flex-direction: row-reverse;
+}
+.transit__express .more__wrap .text-box {
+  display: block;
+}
+.transit__express .more__wrap .more-main .wrap {
+  background-color: #eee;
+  padding: 20px;
+}
+.transit__express .more__wrap .more-main .wrap:first-of-type > h2 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.transit__express .more__wrap .more-main .wrap:first-of-type > ul {
+  float: right;
+  display: flex;
+  gap: 20px;
+}
+.transit__express .more__wrap .more-main .wrap:first-of-type > ul img {
+  width: 30px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) {
+  text-align: center;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) > p {
+  margin: 10px 0;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) h3 {
+  text-align: start;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) .wrap {
+  background-color: #ccc;
+  margin-bottom: 0;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) .wrap p {
+  text-indent: 40px;
+  padding: 10px 0;
+  background: url("../images/ico_pay--more.png") no-repeat;
+  background-size: 40px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) .wrap p:first-child {
+  background-position-y: -280px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(2) .wrap p:last-child {
+  background-position-y: -160px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) {
+  text-align: start;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) h2 {
+  text-align: center;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) .search-box {
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px 0 20px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) .search-box img {
+  width: 20px;
+  display: inline;
+  margin-right: 5px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) h3 {
+  margin-bottom: 10px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) .wrap {
+  background-color: #ccc;
+  margin: 0;
+  padding: 10px;
+}
+.transit__express .more__wrap .more-main .wrap:nth-of-type(3) .wrap p {
+  padding: 10px 0;
+  background: url("../images/ico_pay--more.png") no-repeat;
+  background-size: 60px;
+  background-position-y: -420px;
+}
+.transit__express .more__wrap .more-main > p img {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  margin: 0 5px;
 }
 .transit .ticket-air {
   position: relative;

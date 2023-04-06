@@ -1,14 +1,32 @@
+const moreOpenBtn = document.querySelectorAll(".more__btn > button");
 const moreCloseBtn = document.querySelectorAll(".more__wrap > .close");
 
-function moreClose(e) {
-  const parent = e.currentTarget.parentNode;
-  parent.style.opacity = "0";
+/** 사용법 버튼을 클릭하면 more__wrap이 fixed되며 화면 전체에 보여짐 */
+function moreOpen(e) {
+  const parent = e.target.closest(".wrap");
+  const moreWrap = parent.querySelector(".more__wrap");
+  moreWrap.style.display = "block";
 
-  setTimeout(() => {
-    parent.style.display = "none";
-  }, 500);
+  /* display:block과 동시에 실행되어 transition이 적용되지 않는 현상을 막기 위해 사용함 */
+  requestAnimationFrame(() => {
+    moreWrap.classList.add("open");
+  });
 }
 
+/** 닫기 버튼을 클릭 하면 해당 fixed된 요소 제거 */
+function moreClose(e) {
+  const parent = e.currentTarget.parentNode;
+  parent.classList.remove("open");
+
+  /* transition이 종료되면, inline CSS를 제거함에 따라 기본 값인 display: none으로 돌아가게 됨 */
+  parent.addEventListener("transitionend", () => {
+    parent.removeAttribute("style");
+  });
+}
+
+moreOpenBtn.forEach((btn) => {
+  btn.addEventListener("click", moreOpen);
+});
 moreCloseBtn.forEach((btn) => {
   btn.addEventListener("click", moreClose);
 });

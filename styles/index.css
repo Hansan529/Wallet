@@ -30,15 +30,13 @@
   background-color: #d9d6cc;
   transition: 0.5s;
 }
-.main > section,
-.main > article {
+.main .inner {
   width: 95%;
   max-width: 350px;
   margin: 0 auto;
 }
 @media screen and (min-width: 1280px) {
-  .main > section,
-  .main > article {
+  .main .inner {
     width: 100%;
     max-width: 1024px;
   }
@@ -93,14 +91,52 @@
   border-radius: 30px;
   padding: 25px;
 }
-.payment__cash .iphone__card {
-  background-image: url("../images/payment__appleCash.jpg");
-  justify-content: flex-end;
+.payment__card .more__wrap .more-main .wrap {
+  background-color: #eee;
+  padding: 20px;
 }
-.payment__cash .iphone__card > span {
-  position: relative;
-  top: -10px;
-  right: -5px;
+.payment__card .more__wrap .more-main .wrap h2 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.payment__card .more__wrap .more-main .wrap > ul {
+  float: right;
+  display: flex;
+  gap: 20px;
+}
+.payment__card .more__wrap .more-main .wrap > ul img {
+  width: 30px;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) {
+  text-align: center;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) > p {
+  margin: 10px 0;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) h3 {
+  text-align: start;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) .wrap {
+  background-color: #ccc;
+  margin-bottom: 0;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) .wrap p {
+  text-indent: 40px;
+  padding: 10px 0;
+  background: url("../images/ico_pay--more.png") no-repeat;
+  background-size: 40px;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) .wrap p:first-child {
+  background-position-y: -280px;
+}
+.payment__card .more__wrap .more-main .wrap:nth-of-type(2) .wrap p:last-child {
+  background-position-y: -160px;
+}
+.payment__card .more__wrap .more-main > p img {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  margin: 0 5px;
 }
 .payment__pay {
   /* 더보기 버튼 누르면 나오는 box */
@@ -122,69 +158,71 @@
      object-fit: contain;
   margin-bottom: 10px;
 }
-.payment__pay .payment__ico-wrap .payment__ico:first-child i {
-  width: 100%;
-  height: 65px;
-  display: block;
-  margin-bottom: 10px;
-  background: url("../images/ico_pay--more.png") no-repeat 0 0/cover;
-}
-.payment__pay--more .payment__header .text-box {
+.payment__pay .more__wrap .more-header .text-box {
   float: left;
 }
-.payment__pay--more .payment__header .payment__ico {
+.payment__pay .more__wrap .more-header .payment__ico {
   text-align: end;
 }
-.payment__pay--more .payment__header .payment__ico > img {
+.payment__pay .more__wrap .more-header .payment__ico > img {
   display: inline;
   width: 40px;
   margin: 0 5px;
 }
 @media screen and (min-width: 1280px) {
-  .payment__pay--more .payment__main .payment__ico {
+  .payment__pay .more__wrap .more-main .payment__ico {
     float: left;
   }
 }
-.payment__pay--more .payment__main i {
+.payment__pay .more__wrap .more-main i {
   background: url("../images/ico_pay--more.png") no-repeat center 0/100%;
   width: 40px;
   height: 40px;
   display: inline-block;
 }
-.payment__pay--more .payment__main .ico__pay-onlineShop {
+.payment__pay .more__wrap .more-main .ico__pay-onlineShop {
   background-position-y: -40px;
 }
-.payment__pay--more .payment__main .ico__pay-restaurant {
+.payment__pay .more__wrap .more-main .ico__pay-restaurant {
   background-position-y: -80px;
 }
-.payment__pay--more .payment__main .ico__pay-cafe {
+.payment__pay .more__wrap .more-main .ico__pay-cafe {
   background-position-y: -120px;
 }
-.payment__pay--more .payment__main .ico__pay-transit {
+.payment__pay .more__wrap .more-main .ico__pay-transit {
   background-position-y: -160px;
 }
-.payment__pay--more .payment__main .ico__pay-boardingPass {
+.payment__pay .more__wrap .more-main .ico__pay-boardingPass {
   background-position-y: -200px;
 }
-.payment__pay--more .payment__main .ico__pay-bank {
+.payment__pay .more__wrap .more-main .ico__pay-bank {
   background-position-y: -240px;
 }
-.payment__pay--more .payment__main .ico__pay-cardCompany {
+.payment__pay .more__wrap .more-main .ico__pay-cardCompany {
   background-position-y: -280px;
 }
-.payment__pay--more .payment__main .ico__pay-gamepad {
+.payment__pay .more__wrap .more-main .ico__pay-gamepad {
   background-position-y: -320px;
 }
-.payment__pay--more .payment__main .ico__pay-app {
+.payment__pay .more__wrap .more-main .ico__pay-app {
   background-position-y: -360px;
 }
-.payment__pay--more .payment__main .contactless {
+.payment__pay .more__wrap .more-main .contactless {
   background-image: url("../images/ico_contactless.png");
   width: 30px;
   height: 30px;
 }
-.payment__pay--more .payment__main .text-box {
+.payment__pay .more__wrap .more-main .text-box {
   margin-bottom: 10px;
+}
+.payment__cash .iphone__card {
+  background-image: url("../images/payment__appleCash.jpg");
+  justify-content: flex-end;
+}
+.payment__cash .iphone__card > span {
+  position: relative;
+  top: -10px;
+  right: -5px;
 }
 .payment__apple-card .iphone__card {
   background-image: url("../images/payment__appleCard.jpg");

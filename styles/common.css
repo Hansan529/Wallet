@@ -168,9 +168,6 @@ header {
 #main .dark__wrap .close {
   background-image: url("../images/ico_multiply--white.svg");
 }
-#main .dark__wrap .more__wrap {
-  transition: 0.5s ease-in-out;
-}
 #main .dark__wrap .more__wrap .close {
   background-image: url("../images/ico_multiply.svg");
 }
@@ -191,10 +188,10 @@ header {
   opacity: 0;
   display: none;
   overflow: auto;
+  transition: 0.5s ease-in-out;
+  z-index: 30;
 }
-
-#main .payment__cash--more {
-  display: block;
+#main .more__wrap.open {
   opacity: 1;
 }
 
@@ -372,7 +369,7 @@ header {
   position: relative;
   padding: 10px;
 }
-.iphone__request .profile__img {
+.iphone__request .img-box {
   margin-bottom: 30px;
 }
 .iphone__latest-transaction {

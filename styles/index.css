@@ -12,20 +12,16 @@
   white-space: nowrap;
 }
 
-:is(.payment__wrap, .security__wrap, .transit__wrap, .identity__wrap,
-.payment__text,
-.identity__text,
-.transit__text,
-.security__text) > h2 {
+:is(.wrap, .text-box) > h2 {
   font-size: 32px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
-:is(.payment__img, .identity__img, .transit__img, .security__img) {
+.img-box {
   margin: 20px 0;
 }
-:is(.payment__img, .identity__img, .transit__img, .security__img) > img {
+.img-box > img {
   width: 80%;
   margin: 0 auto;
 }
@@ -79,9 +75,15 @@
   background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
 }
 
-.payment {
-  /** 모든 wrap 태그가 참조하고 있는 스타일 */
+/** 모든 wrap 태그가 참조하고 있는 스타일 */
+.wrap {
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  padding: 40px 30px 20px;
+  margin: 20px 0;
 }
+
 .payment .themeColor {
   color: #3496ca;
 }
@@ -90,13 +92,6 @@
   color: #16435a;
   border-radius: 30px;
   padding: 25px;
-}
-.payment__wrap, .security__wrap, .transit__wrap, .identity__wrap {
-  background-color: #fff;
-  color: #000;
-  border-radius: 30px;
-  padding: 40px 30px 20px;
-  margin: 20px 0;
 }
 .payment__cash .iphone__card {
   background-image: url("../images/payment__appleCash.jpg");
@@ -132,12 +127,9 @@
   height: 65px;
   display: block;
   margin-bottom: 10px;
-  background: url("../images/ico_pay--more.png") no-repeat 0 0/200%;
+  background: url("../images/ico_pay--more.png") no-repeat 0 0/cover;
 }
-.payment__pay--more {
-  overflow: auto;
-}
-.payment__pay--more .payment__header .payment__text {
+.payment__pay--more .payment__header .text-box {
   float: left;
 }
 .payment__pay--more .payment__header .payment__ico {
@@ -191,18 +183,18 @@
   width: 30px;
   height: 30px;
 }
-.payment__pay--more .payment__main .payment__text {
+.payment__pay--more .payment__main .text-box {
   margin-bottom: 10px;
 }
 .payment__apple-card .iphone__card {
   background-image: url("../images/payment__appleCard.jpg");
 }
-.payment__membership .payment__img .row {
+.payment__membership .img-box .row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.payment__membership .payment__img .row__space {
+.payment__membership .img-box .row__space {
   width: 88px;
   height: 88px;
 }
@@ -287,7 +279,7 @@
   height: 400px;
   background: url("../images/transit-bg.svg") no-repeat -50px 60%/160%;
 }
-.transit__express .transit__text {
+.transit__express .text-box {
   height: 90%;
   display: flex;
   align-items: flex-end;

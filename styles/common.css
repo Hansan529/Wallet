@@ -1,14 +1,11 @@
+@charset "UTF-8";
 body {
   background-color: #fff;
   color: #000;
   word-break: keep-all;
   font-size: 14px;
   font-family: "Noto Sans Kr", sans-serif;
-  letter-spacing: -2px;
-}
-[data-theme=dark] body {
-  background-color: #000;
-  color: #fff;
+  letter-spacing: -1px;
 }
 
 .logo {
@@ -55,10 +52,6 @@ header {
   color: #000;
   align-items: center;
 }
-[data-theme=dark] header {
-  background-color: #666;
-  color: #fff;
-}
 @media screen and (min-width: 1280px) {
   header {
     height: 100px;
@@ -77,10 +70,6 @@ header {
   color: #000;
   border-radius: 50%;
 }
-[data-theme=dark] .now {
-  background-color: #999;
-  color: #fff;
-}
 .now__main {
   width: 100%;
   height: 100%;
@@ -91,9 +80,6 @@ header {
   transform: translate(-50%, -50%);
   transition: 0.5s ease;
   color: #000;
-}
-[data-theme=dark] .now__main {
-  color: #fff;
 }
 .now__list-wrap {
   width: 101%;
@@ -150,10 +136,6 @@ header {
   color: #000;
   border-radius: 50%;
 }
-[data-theme=dark] .now__list::after {
-  background-color: #000;
-  color: #fff;
-}
 .now__list.more__now::after {
   width: 400px;
   height: 400px;
@@ -164,34 +146,50 @@ header {
   z-index: 1;
 }
 
-.dark__wrap {
-  background-color: #222 !important;
-  color: #fff !important;
+/* ID 태그를 이용해, 우선순위 높임 [검은색 배경] */
+#main .dark__wrap {
+  background-color: #222;
+  color: #fff;
 }
-[data-theme=dark] .dark__wrap {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-.dark__wrap .iphone {
+#main .dark__wrap .iphone {
   background-color: #000;
 }
-.dark__wrap .iphone__content > div {
+#main .dark__wrap .iphone__content > div {
   background-color: #333;
   color: #fff;
 }
-.dark__wrap .iphone__balance--resReq {
+#main .dark__wrap .iphone__balance--resReq {
   background-color: #fff;
   color: #000;
 }
-.dark__wrap .more__btn button {
+#main .dark__wrap .more__btn button {
   background-image: url("../images/ico_plus-circle--white.svg");
 }
-.dark__wrap .close {
+#main .dark__wrap .close {
   background-image: url("../images/ico_multiply--white.svg");
+}
+#main .dark__wrap .more__wrap .close {
+  background-image: url("../images/ico_multiply.svg");
 }
 
 .main {
   padding-bottom: 50px;
+}
+
+/* 우선순위, 모바일 환경에서 전체 화면 */
+#main .more__wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  display: none;
+}
+
+#main .payment__pay--more {
+  display: block;
 }
 
 .close {
@@ -272,10 +270,6 @@ header {
   margin-bottom: 20px;
   background-color: #fff;
   color: #000;
-}
-[data-theme=dark] .iphone__content > div {
-  background-color: #000;
-  color: #fff;
 }
 .iphone__content > h2 {
   width: 95%;
@@ -367,10 +361,6 @@ header {
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
-}
-[data-theme=dark] .iphone__round-btn {
-  background-color: #000;
-  color: #fff;
 }
 .iphone__request {
   position: relative;

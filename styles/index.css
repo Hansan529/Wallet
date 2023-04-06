@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :is(.main__center, article) > h2 {
   font-size: 40px;
 }
@@ -8,6 +9,7 @@
 }
 :is(.main__center, article) > h2 > span {
   color: #fff;
+  white-space: nowrap;
 }
 
 :is(.payment__wrap, .security__wrap, .transit__wrap, .identity__wrap,
@@ -76,10 +78,10 @@
   display: block;
   background: url("../images/ico_plus-circle.svg") no-repeat center/cover;
 }
-.more__btn + div {
-  display: none;
-}
 
+.payment {
+  /** 모든 wrap 태그가 참조하고 있는 스타일 */
+}
 .payment .themeColor {
   color: #3496ca;
 }
@@ -87,7 +89,7 @@
   background-color: #3496ca;
   color: #16435a;
   border-radius: 30px;
-  padding: 30px;
+  padding: 25px;
 }
 .payment__wrap, .security__wrap, .transit__wrap, .identity__wrap {
   background-color: #fff;
@@ -95,10 +97,6 @@
   border-radius: 30px;
   padding: 40px 30px 20px;
   margin: 20px 0;
-}
-[data-theme=dark] .payment__wrap, [data-theme=dark] .security__wrap, [data-theme=dark] .transit__wrap, [data-theme=dark] .identity__wrap {
-  background-color: #000;
-  color: #fff;
 }
 .payment__cash .iphone__card {
   background-image: url("../images/payment__appleCash.jpg");
@@ -108,6 +106,9 @@
   position: relative;
   top: -10px;
   right: -5px;
+}
+.payment__pay {
+  /* 더보기 버튼 누르면 나오는 box */
 }
 .payment__pay .payment__ico-wrap {
   display: flex;
@@ -133,6 +134,66 @@
   margin-bottom: 10px;
   background: url("../images/ico_pay--more.png") no-repeat 0 0/200%;
 }
+.payment__pay--more {
+  overflow: auto;
+}
+.payment__pay--more .payment__header .payment__text {
+  float: left;
+}
+.payment__pay--more .payment__header .payment__ico {
+  text-align: end;
+}
+.payment__pay--more .payment__header .payment__ico > img {
+  display: inline;
+  width: 40px;
+  margin: 0 5px;
+}
+@media screen and (min-width: 1280px) {
+  .payment__pay--more .payment__main .payment__ico {
+    float: left;
+  }
+}
+.payment__pay--more .payment__main i {
+  background: url("../images/ico_pay--more.png") no-repeat center 0/100%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.payment__pay--more .payment__main .ico__pay-onlineShop {
+  background-position-y: -40px;
+}
+.payment__pay--more .payment__main .ico__pay-restaurant {
+  background-position-y: -80px;
+}
+.payment__pay--more .payment__main .ico__pay-cafe {
+  background-position-y: -120px;
+}
+.payment__pay--more .payment__main .ico__pay-transit {
+  background-position-y: -160px;
+}
+.payment__pay--more .payment__main .ico__pay-boardingPass {
+  background-position-y: -200px;
+}
+.payment__pay--more .payment__main .ico__pay-bank {
+  background-position-y: -240px;
+}
+.payment__pay--more .payment__main .ico__pay-cardCompany {
+  background-position-y: -280px;
+}
+.payment__pay--more .payment__main .ico__pay-gamepad {
+  background-position-y: -320px;
+}
+.payment__pay--more .payment__main .ico__pay-app {
+  background-position-y: -360px;
+}
+.payment__pay--more .payment__main .contactless {
+  background-image: url("../images/ico_contactless.png");
+  width: 30px;
+  height: 30px;
+}
+.payment__pay--more .payment__main .payment__text {
+  margin-bottom: 10px;
+}
 .payment__apple-card .iphone__card {
   background-image: url("../images/payment__appleCard.jpg");
 }
@@ -153,7 +214,7 @@
   background-color: #fbae04;
   color: #835a00;
   border-radius: 30px;
-  padding: 30px;
+  padding: 25px;
 }
 .identity__driver .iphone__card {
   background-image: url("../images/driverlicense-bg.png");
@@ -219,7 +280,7 @@
   background-color: #50be3e;
   color: #29631f;
   border-radius: 30px;
-  padding: 30px;
+  padding: 25px;
 }
 .transit__express {
   position: relative;
@@ -350,7 +411,7 @@
   background-color: #f26d60;
   color: #6f3530;
   border-radius: 30px;
-  padding: 30px;
+  padding: 25px;
 }
 .security__hotel .iphone__card {
   display: grid;

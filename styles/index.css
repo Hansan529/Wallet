@@ -1,6 +1,17 @@
 @charset "UTF-8";
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  section {
+    position: relative;
+  }
+}
+
 :is(.main__center, article) > h2 {
   font-size: 36px;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  :is(.main__center, article) > h2 {
+    font-size: 60px;
+  }
 }
 @media screen and (min-width: 1280px) {
   :is(.main__center, article) > h2 {
@@ -24,37 +35,6 @@
 .img-box > img {
   width: 80%;
   margin: 0 auto;
-}
-
-.main {
-  background-color: #d9d6cc;
-  transition: 0.5s;
-}
-.main .inner {
-  width: 95%;
-  max-width: 350px;
-  margin: 0 auto;
-}
-@media screen and (min-width: 1280px) {
-  .main .inner {
-    width: 100%;
-    max-width: 1024px;
-  }
-}
-.main__center {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: calc(100vh - 50px);
-  gap: 10px;
-  text-align: start;
-}
-.main__title {
-  width: 80%;
-}
-.main__text {
-  width: 90%;
-  word-break: keep-all;
 }
 
 .more__btn {
@@ -95,6 +75,61 @@
   color: #16435a;
   border-radius: 30px;
   padding: 25px;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__title {
+    padding: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card .img-box {
+    order: 1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card .text-box {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card .more__btn {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card .more__wrap .more-header .text-box {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+}
+.payment__card .more__wrap .more-header .text-box .text-box__lg {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card .more__wrap .more-header .text-box .text-box__lg {
+    display: block;
+  }
+}
+.payment__card .more__wrap .more-header .text-box .text-box__lg img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .payment__card .more__wrap .more-main {
+    margin: 0 0 0 auto;
+    width: 40%;
+  }
 }
 .payment__card .more__wrap .more-main .wrap {
   background-color: #eee;
@@ -251,6 +286,11 @@
   border-radius: 30px;
   padding: 25px;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .identity__title {
+    padding: 60px;
+  }
+}
 .identity__driver .iphone__card {
   background-image: url("../images/driverlicense-bg.png");
   display: grid;
@@ -316,6 +356,11 @@
   color: #29631f;
   border-radius: 30px;
   padding: 25px;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .transit__title {
+    padding: 60px;
+  }
 }
 .transit__express {
   position: relative;
@@ -528,6 +573,11 @@
   color: #6f3530;
   border-radius: 30px;
   padding: 25px;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .security__title {
+    padding: 60px;
+  }
 }
 .security__hotel .iphone__card {
   display: grid;

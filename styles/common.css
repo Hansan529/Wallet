@@ -7,6 +7,12 @@ body {
   font-family: "Noto Sans Kr", sans-serif;
   letter-spacing: -1px;
 }
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  body {
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+}
 
 .logo {
   width: 90%;
@@ -174,6 +180,38 @@ header {
 
 .main {
   padding-bottom: 50px;
+  background-color: #d9d6cc;
+  transition: 0.5s;
+}
+.main .inner {
+  width: 95%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .main .inner {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main .inner {
+    width: 100%;
+  }
+}
+.main__center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 50px);
+  gap: 10px;
+  text-align: start;
+}
+.main__title {
+  width: 80%;
+}
+.main__text {
+  width: 90%;
+  word-break: keep-all;
 }
 
 /* 우선순위, 모바일 환경에서 전체 화면 */
@@ -190,6 +228,12 @@ header {
   overflow: auto;
   transition: 0.5s ease-in-out;
   z-index: 30;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  #main .more__wrap {
+    position: absolute;
+    border-radius: 30px;
+  }
 }
 #main .more__wrap.open {
   opacity: 1;

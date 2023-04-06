@@ -1,3 +1,18 @@
+const moreCloseBtn = document.querySelectorAll(".more__wrap > .close");
+
+function moreClose(e) {
+  const parent = e.currentTarget.parentNode;
+  parent.style.opacity = "0";
+
+  setTimeout(() => {
+    parent.style.display = "none";
+  }, 500);
+}
+
+moreCloseBtn.forEach((btn) => {
+  btn.addEventListener("click", moreClose);
+});
+
 /** 즉시 실행하여 전역 변수,상수에 영향이 끼치지 않도록 설정함 */
 (() => {
   const main = document.querySelector(".main");

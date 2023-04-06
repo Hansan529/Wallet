@@ -62,7 +62,94 @@
           <div class="more__btn">
             <span>지갑에 추가하는 방법</span><button></button>
           </div>
-          <div class="payment__wrap payment__card--more"></div>
+          <div class="payment__wrap payment__card--more more__wrap">
+            <div class="iphone">
+              <img src="./images/iphone.png" alt="아이폰" />
+              <p class="iphone__time">16:54</p>
+              <div class="iphone__status">
+                <img
+                  src="./images/ico_cellularbars--white.svg"
+                  alt="데이터 품질"
+                />
+                <img src="./images/ico_wifi--white.svg" alt="와이파이" />
+                <span>80%</span>
+              </div>
+              <h2 class="iphone__title">이전</h2>
+              <ul class="iphone__ico">
+                <li>
+                  <button>
+                    <img
+                      src="./images/ico_ellipsis--white.svg"
+                      alt="더보기"
+                      class="ellipsis"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <img
+                      src="./images/ico_search--white.svg"
+                      alt="검색"
+                      class="search"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <div class="iphone__content">
+                <div class="iphone__card">
+                  <!-- <span>134,263원</span> -->
+                </div>
+                <div class="iphone__balance iphone__round">
+                  <p class="iphone__sub-title">잔액</p>
+                  <p class="iphone__cash">134,263원</p>
+                  <button class="iphone__round-btn">송금 또는 수취</button>
+                </div>
+                <div class="iphone__request">
+                  <img
+                    src="./images/iphone-profile.png"
+                    alt="프로필"
+                    class="profile__img"
+                  />
+                  <p class="profile__name"><strong>한산</strong></p>
+                  <p class="request__balance">
+                    <strong>32,300원 송금 요청</strong>
+                  </p>
+                  <p class="profile__reasons">일요일 점심 값 주세요</p>
+                  <p class="profile__expires">요청 만료: 내일</p>
+                  <hr />
+                  <button class="send"><strong>송금하기</strong></button>
+                  <button class="close"></button>
+                </div>
+                <h2>최근 거래내역<i></i></h2>
+                <div class="iphone__latest-transaction">
+                  <img
+                    src="./images/iphone-profile.png"
+                    alt="프로필"
+                    class="profile__img"
+                  />
+                  <p class="profile__name"><strong>한산</strong></p>
+                  <p class="profile__reasons">저녁값</p>
+                  <p class="profile__expires">03.31</p>
+                  <button class="profile__money">
+                    <p>-13,000원<i></i></p>
+                  </button>
+                </div>
+                <div class="iphone__latest-transaction">
+                  <img
+                    src="./images/iphone-profile.png"
+                    alt="프로필"
+                    class="profile__img"
+                  />
+                  <p class="profile__name"><strong>Apple Card</strong></p>
+                  <p class="profile__reasons">페이백</p>
+                  <p class="profile__expires">03.30</p>
+                  <button class="profile__money">
+                    <p>+5,000원<i></i></p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="payment__wrap payment__pay dark__wrap">
           <h2>
@@ -86,21 +173,18 @@
           <div class="more__btn">
             <span>더 많은 사용처</span><button></button>
           </div>
-          <div class="payment__wrap payment__pay--more">
+          <div class="payment__wrap payment__pay--more more__wrap">
             <div class="payment__header">
-              <div class="logo__title">Apple Pay</div>
-              <h2>애플 페이 사용처</h2>
-              <div class="payment__ico">
-                <img
-                  src="./images/ico_wifi-none--white.svg"
-                  alt="와이파이 없이"
-                />
-                <img src="./images/ico_cellular--white.svg" alt="데이터 없이" />
-                <p>
-                  일회성 사용 코드를 이용해 Apple Pay를 통신없이도 결제가
-                  가능합니다
-                </p>
+              <div class="payment__text">
+                <div class="logo__title">Apple Pay</div>
+                <h2>애플 페이 사용처</h2>
               </div>
+              <div class="payment__ico">
+                <img src="./images/ico_wifi-none.svg" alt="와이파이 없이" />
+                <img src="./images/ico_cellular.svg" alt="데이터 없이" />
+                <p>통신없이도 결제가 가능합니다</p>
+              </div>
+              <button class="close"></button>
             </div>
             <div class="payment__main">
               <ul>
@@ -291,7 +375,7 @@
             </div>
           </div>
           <div class="more__btn"><span>사용법</span><button></button></div>
-          <div class="payment__wrap payment__cash--more"></div>
+          <div class="payment__wrap payment__cash--more more__wrap"></div>
         </section>
         <section class="payment__wrap payment__apple-card">
           <div class="payment__text">
@@ -382,7 +466,7 @@
           <div class="more__btn">
             <span>발급 절차 및 상세 정보</span><button></button>
           </div>
-          <div class="payment__wrap payment__card--more"></div>
+          <div class="payment__wrap payment__card--more more__wrap"></div>
         </section>
         <section class="payment__wrap payment__membership dark__wrap">
           <div class="payment__img">
@@ -477,7 +561,7 @@
           <div class="more__btn">
             <span>지갑에 추가하는 방법</span><button></button>
           </div>
-          <div class="payment__wrap payment__membership--more"></div>
+          <div class="payment__wrap payment__membership--more more__wrap"></div>
         </section>
       </article>
       <article class="identity">
@@ -528,14 +612,12 @@
                 <p class="iphone__sub-title">주민등록증</p>
                 <p class="comment">사용 가능</p>
               </div>
-              <div class="more__btn"></div>
-              <div class="identity__wrap identity__driver--more"></div>
             </div>
           </div>
           <div class="more__btn">
             <span>발급 절차 및 상세 정보</span><button></button>
           </div>
-          <div class="identity__wrap identity__driver--more"></div>
+          <div class="identity__wrap identity__driver--more more__wrap"></div>
         </section>
         <section class="identity__wrap identity__employee dark__wrap">
           <div class="identity__text">
@@ -563,7 +645,7 @@
           <div class="more__btn">
             <span>직원증 추가 방법</span><button></button>
           </div>
-          <div class="identity__wrap identity__employee--more"></div>
+          <div class="identity__wrap identity__employee--more more__wrap"></div>
         </section>
         <section class="identity__wrap identity__student dark__wrap">
           <div class="identity__text">
@@ -580,7 +662,7 @@
           <div class="more__btn">
             <span>학생증 추가 방법</span><button></button>
           </div>
-          <div class="identity__wrap identity__student--more"></div>
+          <div class="identity__wrap identity__student--more more__wrap"></div>
         </section>
       </article>
       <article class="transit">
@@ -603,7 +685,7 @@
             <span>교통카드 추가 방법</span>
             <button></button>
           </div>
-          <div class="transit__wrap transit__express--more"></div>
+          <div class="transit__wrap transit__express--more more__wrap"></div>
         </section>
         <section class="transit__wrap transit__boarding-passes">
           <div class="transit__text">
@@ -670,7 +752,9 @@
           <div class="more__btn">
             <span>탑승권을 쉽게 확인하는 방법</span><button></button>
           </div>
-          <div class="transit__wrap transit__boarding-passess--more"></div>
+          <div
+            class="transit__wrap transit__boarding-passess--more more__wrap"
+          ></div>
         </section>
         <section class="transit__wrap transit__pass">
           <div class="transit__text">

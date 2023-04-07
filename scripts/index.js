@@ -55,11 +55,11 @@ moreCloseBtn.forEach((btn) => {
     if (mediaQueryMobile.matches || mediaQueryTablet.matches) {
       if (currentScroll >= 500 && currentScroll < 4000) {
         setBackground("#3496ca");
-      } else if (currentScroll >= 4000 && currentScroll < 6500) {
+      } else if (currentScroll >= 4000 && currentScroll < 6400) {
         setBackground("#fbae04");
-      } else if (currentScroll >= 6500 && currentScroll < 9400) {
+      } else if (currentScroll >= 6400 && currentScroll < 9100) {
         setBackground("#50be3e");
-      } else if (currentScroll >= 9400) {
+      } else if (currentScroll >= 9100) {
         setBackground("#f26d60");
       } else {
         setBackground("#d9d6cc");

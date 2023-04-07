@@ -466,15 +466,17 @@
     display: block;
   }
 }
-.identity__student .watch .watch__card {
+.identity__student .watch__card {
+  height: 150px;
   background: #000 url("../images/watch-university.svg") no-repeat 20px center/40%;
 }
 @media screen and (min-width: 768px) {
-  .identity__student .watch .watch__card {
+  .identity__student .watch__card {
+    position: relative;
+    right: 13px;
     width: 60%;
-    height: 30%;
-    background-size: 50%;
     font-size: 30px;
+    text-indent: -100px;
   }
 }
 
@@ -747,6 +749,40 @@
 @media screen and (min-width: 768px) {
   .security__title {
     padding: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .security__title {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 768px) {
+  .security__homekit {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 768px) {
+  .security__homekit .img-box {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .security__homekit .img-box > img {
+    width: 60%;
+    margin: 0 0 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .security__homekit .text-box {
+    position: absolute;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .security__homekit .more__btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
   }
 }
 .security__hotel .iphone__card {

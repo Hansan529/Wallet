@@ -149,10 +149,14 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .payment__card .more__wrap .more-header {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
   .payment__card .more__wrap .more-header .text-box {
     display: block;
     float: left;
-    width: 50%;
   }
 }
 .payment__card .more__wrap .more-header .text-box .img-box__lg {

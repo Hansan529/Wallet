@@ -7,7 +7,7 @@ body {
   font-family: "Noto Sans Kr", sans-serif;
   letter-spacing: -1px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: 16px;
     letter-spacing: normal;
@@ -188,7 +188,7 @@ header {
   max-width: 350px;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .main .inner {
     max-width: 1024px;
   }
@@ -229,7 +229,7 @@ header {
   transition: 0.5s ease-in-out;
   z-index: 30;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   #main .more__wrap {
     position: absolute;
     border-radius: 30px;
@@ -260,6 +260,13 @@ header {
   max-width: 370px;
   margin: 20px 0;
 }
+@media screen and (min-width: 768px) {
+  .iphone {
+    margin: 0 auto;
+    /* 높이 값을 초기화 하지 않으면 이미지 사이즈를 넘어가는 현상 발생 */
+    height: initial;
+  }
+}
 .iphone > img {
   position: relative;
   z-index: 1;
@@ -274,6 +281,11 @@ header {
   left: 50%;
   transform: translateX(-115px);
 }
+@media screen and (min-width: 768px) {
+  .iphone__time {
+    transform: translateX(-140px);
+  }
+}
 .iphone__status {
   width: 15px;
   display: flex;
@@ -284,11 +296,21 @@ header {
   align-items: center;
   font-size: 12px;
 }
+@media screen and (min-width: 768px) {
+  .iphone__status {
+    transform: translateX(90px);
+  }
+}
 .iphone__title {
   top: 65px;
   left: 50%;
   transform: translateX(-115px);
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .iphone__title {
+    transform: translateX(-140px);
+  }
 }
 .iphone__ico {
   display: flex;
@@ -297,6 +319,11 @@ header {
   transform: translateX(60px);
   flex-direction: row-reverse;
   gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .iphone__ico {
+    transform: translateX(90px);
+  }
 }
 .iphone__ico > li {
   width: 20px;
@@ -339,6 +366,11 @@ header {
   color: #fff;
   border-radius: 10px !important;
   background: no-repeat 0/cover;
+}
+@media screen and (min-width: 768px) {
+  .iphone__card {
+    height: 200px;
+  }
 }
 .iphone__card .logo__title {
   width: initial;
@@ -501,6 +533,12 @@ hr {
   margin: 20px auto;
   align-items: center;
   background: url("../images/watch.svg") no-repeat 65% 0/contain;
+}
+@media screen and (min-width: 768px) {
+  .watch {
+    height: 70%;
+    background-position-x: 15px;
+  }
 }
 .watch__card {
   width: 50%;

@@ -29,9 +29,9 @@ function moreClose(e) {
   parent.classList.remove("open");
 
   /* transition이 종료되면, inline CSS를 제거함에 따라 기본 값인 display: none으로 돌아가게 됨 */
-  parent.addEventListener("transitionend", () => {
+  setTimeout(() => {
     parent.removeAttribute("style");
-  });
+  }, 500);
 }
 
 moreOpenBtn.forEach((btn) => {

@@ -1,14 +1,27 @@
 @charset "UTF-8";
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+.security, .transit, .identity, .payment {
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 768px) {
   section {
     position: relative;
+    display: flex;
+    align-items: center;
   }
 }
 
 :is(.main__center, article) > h2 {
   font-size: 36px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   :is(.main__center, article) > h2 {
     font-size: 60px;
   }
@@ -28,6 +41,12 @@
   line-height: 1.2;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  :is(.wrap, .text-box) > h2 {
+    font-size: 36px;
+    line-height: normal;
+  }
+}
 
 .img-box {
   margin: 20px 0;
@@ -42,6 +61,12 @@
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .more__btn {
+    justify-content: center;
+    margin: 10px 0;
+  }
 }
 .more__btn span {
   font-size: 12px;
@@ -66,7 +91,17 @@
   padding: 40px 30px 20px;
   margin: 20px 0;
 }
+@media screen and (min-width: 768px) {
+  .wrap {
+    overflow: hidden;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .payment {
+    width: 100%;
+  }
+}
 .payment .themeColor {
   color: #3496ca;
 }
@@ -76,22 +111,27 @@
   border-radius: 30px;
   padding: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .payment__title {
     padding: 60px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .payment__card {
-    display: flex;
+@media screen and (min-width: 768px) {
+  .payment__title {
+    grid-column: 1/3;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
+  .payment__card {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 768px) {
   .payment__card .img-box {
     order: 1;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .payment__card .text-box {
     order: 2;
     display: flex;
@@ -100,32 +140,32 @@
     flex: 1;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .payment__card .more__btn {
     position: absolute;
     right: 10%;
     bottom: 10%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .payment__card .more__wrap .more-header .text-box {
     display: block;
     float: left;
     width: 50%;
   }
 }
-.payment__card .more__wrap .more-header .text-box .text-box__lg {
+.payment__card .more__wrap .more-header .text-box .img-box__lg {
   display: none;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .payment__card .more__wrap .more-header .text-box .text-box__lg {
+@media screen and (min-width: 768px) {
+  .payment__card .more__wrap .more-header .text-box .img-box__lg {
     display: block;
   }
 }
-.payment__card .more__wrap .more-header .text-box .text-box__lg img {
+.payment__card .more__wrap .more-header .text-box .img-box__lg img {
   width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .payment__card .more__wrap .more-main {
     margin: 0 0 0 auto;
     width: 40%;
@@ -181,10 +221,25 @@
 .payment__pay {
   /* 더보기 버튼 누르면 나오는 box */
 }
+@media screen and (min-width: 768px) {
+  .payment__pay {
+    grid-column: 1/3;
+    height: 800px;
+    display: flex;
+    height: 800px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 .payment__pay .payment__ico-wrap {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .payment__pay .payment__ico-wrap {
+    width: 100%;
+  }
 }
 .payment__pay .payment__ico-wrap .payment__ico {
   width: 28.3333333333%;
@@ -197,6 +252,12 @@
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .payment__pay .more__btn {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 .payment__pay .more__wrap .more-header .text-box {
   float: left;
@@ -255,6 +316,16 @@
 .payment__pay .more__wrap .more-main .text-box {
   margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  .payment__cash {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .payment__cash .iphone {
+    border-radius: 80px;
+  }
+}
 .payment__cash .iphone__card {
   background-image: url("../images/payment__appleCash.jpg");
   justify-content: flex-end;
@@ -264,8 +335,19 @@
   top: -10px;
   right: -5px;
 }
+@media screen and (min-width: 768px) {
+  .payment__apple-card {
+    display: block;
+  }
+}
 .payment__apple-card .iphone__card {
   background-image: url("../images/payment__appleCard.jpg");
+}
+@media screen and (min-width: 768px) {
+  .payment__membership {
+    grid-column: 1/3;
+    gap: 30px;
+  }
 }
 .payment__membership .img-box .row {
   display: flex;
@@ -275,6 +357,21 @@
 .payment__membership .img-box .row__space {
   width: 88px;
   height: 88px;
+}
+.payment__membership .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .payment__membership .text-box p {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .payment__membership > div {
+    flex: 1;
+  }
 }
 
 .identity .themeColor {
@@ -286,16 +383,26 @@
   border-radius: 30px;
   padding: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .identity__title {
     padding: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .identity__title {
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .identity__driver {
+    grid-column: span 2;
   }
 }
 .identity__driver .iphone__card {
   background-image: url("../images/driverlicense-bg.png");
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   justify-content: space-between;
   padding-bottom: 15px;
 }
@@ -325,6 +432,16 @@
   border-radius: 10px;
   background: #fff url("../images/ico_faceid.svg") no-repeat center/60px;
 }
+@media screen and (min-width: 768px) {
+  .identity__employee {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .identity__employee .iphone {
+    order: 1;
+  }
+}
 .identity__employee .iphone__content {
   top: 80px;
 }
@@ -344,8 +461,21 @@
   background: url("../images/ico_iphone.gen2.svg") no-repeat center 15px/60%;
   margin: 0 auto 20px;
 }
-.identity__student .watch__card {
+@media screen and (min-width: 768px) {
+  .identity__student {
+    display: block;
+  }
+}
+.identity__student .watch .watch__card {
   background: #000 url("../images/watch-university.svg") no-repeat 20px center/40%;
+}
+@media screen and (min-width: 768px) {
+  .identity__student .watch .watch__card {
+    width: 60%;
+    height: 30%;
+    background-size: 50%;
+    font-size: 30px;
+  }
 }
 
 .transit .themeColor {
@@ -357,15 +487,29 @@
   border-radius: 30px;
   padding: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .transit__title {
     padding: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .transit__title {
+    grid-column: 1/3;
   }
 }
 .transit__express {
   position: relative;
   height: 400px;
   background: url("../images/transit-bg.svg") no-repeat -50px 60%/160%;
+}
+@media screen and (min-width: 768px) {
+  .transit__express {
+    flex-direction: column;
+    align-items: flex-start;
+    height: initial;
+    padding: 80px;
+    padding-bottom: 0;
+  }
 }
 .transit__express .text-box {
   height: 90%;
@@ -456,7 +600,16 @@
   display: inline;
   margin: 0 5px;
 }
-.transit .ticket-air {
+@media screen and (min-width: 768px) {
+  .transit__boarding-passes {
+    display: block;
+  }
+}
+.transit__boarding-passes .img-box {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.transit .img-box .ticket-air {
   position: relative;
   border: 2px solid #000;
   border-radius: 20px;
@@ -466,62 +619,62 @@
   overflow: hidden;
   background: url("../images/ticket-air-QR.png") no-repeat center 90%/150px;
 }
-.transit .ticket-air__logo {
+.transit .img-box .ticket-air__logo {
   float: left;
   width: 80px;
   height: 20px;
   background: url("../images/logo_Asiana_Airlines.svg") no-repeat center/contain;
 }
-.transit .ticket-air__time {
+.transit .img-box .ticket-air__time {
   text-align: end;
   font-size: 18px;
   font-weight: bold;
 }
-.transit .ticket-air__time > p {
+.transit .img-box .ticket-air__time > p {
   font-size: 12px;
 }
-.transit .ticket-air__nav {
+.transit .img-box .ticket-air__nav {
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
 }
-.transit .ticket-air__nav > div > p {
+.transit .img-box .ticket-air__nav > div > p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.transit .ticket-air__nav > div > h2 {
+.transit .img-box .ticket-air__nav > div > h2 {
   font-size: 26px;
 }
-.transit .ticket-air__nav-starting {
+.transit .img-box .ticket-air__nav-starting {
   width: 40%;
 }
-.transit .ticket-air__nav-airplane {
+.transit .img-box .ticket-air__nav-airplane {
   width: 40px;
   display: block;
   background: url("../images/ticket-air.png") no-repeat -40px center/200%;
   margin: 0 10px;
 }
-.transit .ticket-air__nav-arrived {
+.transit .img-box .ticket-air__nav-arrived {
   width: 40%;
 }
-.transit .ticket-air__nav-arrived h2 {
+.transit .img-box .ticket-air__nav-arrived h2 {
   text-align: end;
 }
-.transit .ticket-air__main {
+.transit .img-box .ticket-air__main {
   margin: 20px 0 0;
 }
-.transit .ticket-air__grid-wrap {
+.transit .img-box .ticket-air__grid-wrap {
   display: grid;
   gap: 10px;
   grid-template-columns: 30% 1fr 15% 15%;
   grid-template-rows: 1fr 1fr;
   white-space: nowrap;
 }
-.transit .ticket-air__grid-wrap .ticket-air__class {
+.transit .img-box .ticket-air__grid-wrap .ticket-air__class {
   grid-column: 2/4;
 }
-.transit .ticket-air__dot {
+.transit .img-box .ticket-air__dot {
   display: flex;
   justify-content: space-between;
   width: 104%;
@@ -529,12 +682,17 @@
   top: 130px;
   left: -2%;
 }
-.transit .ticket-air__dot > i {
+.transit .img-box .ticket-air__dot > i {
   width: 10px;
   height: 10px;
   display: block;
   border-radius: 50%;
   background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  .transit__pass {
+    display: block;
+  }
 }
 .transit__pass .iphone__card {
   background-image: url("../images/transit_park.png");
@@ -551,6 +709,11 @@
 .transit__pass .iphone__check {
   background-color: transparent;
 }
+@media screen and (min-width: 768px) {
+  .transit__movieEvent {
+    display: block;
+  }
+}
 .transit__movieEvent .watch {
   flex-direction: column;
   justify-content: center;
@@ -558,6 +721,13 @@
 .transit__movieEvent .watch .watch__card {
   height: 150px;
   background: url("../images/transit_movieEvent-bg.png") no-repeat center/contain;
+}
+@media screen and (min-width: 768px) {
+  .transit__movieEvent .watch .watch__card {
+    width: 70%;
+    height: 50%;
+    background-position: center 30%;
+  }
 }
 .transit__movieEvent .watch .watch__card > p {
   width: 100%;
@@ -574,7 +744,7 @@
   border-radius: 30px;
   padding: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .security__title {
     padding: 60px;
   }

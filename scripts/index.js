@@ -1,3 +1,9 @@
+/** 반응형 사이즈 체크 */
+const mediaQueryMobile = window.matchMedia("(max-width:767px)");
+const mediaQueryTablet = window.matchMedia(
+  "(min-width: 768px) and (max-width:1280px)"
+);
+const mediaQueryDesktop = window.matchMedia("(min-width:1281px)");
 const moreOpenBtn = document.querySelectorAll(".more__btn > button");
 const moreCloseBtn = document.querySelectorAll(".more__wrap > .close");
 
@@ -6,6 +12,10 @@ function moreOpen(e) {
   const parent = e.target.closest(".wrap");
   const moreWrap = parent.querySelector(".more__wrap");
   moreWrap.style.display = "block";
+
+  if (mediaQueryTablet.matches || mediaQueryDesktop.matches) {
+    moreWrap.style.display = "flex";
+  }
 
   /* display:block과 동시에 실행되어 transition이 적용되지 않는 현상을 막기 위해 사용함 */
   requestAnimationFrame(() => {
@@ -34,12 +44,22 @@ moreCloseBtn.forEach((btn) => {
 /** 즉시 실행하여 전역 변수,상수에 영향이 끼치지 않도록 설정함 */
 (() => {
   const main = document.querySelector(".main");
-  /** 반응형 사이즈 체크 */
-  const mediaQueryMobile = window.matchMedia("(max-width:767px)");
-  const mediaQueryTablet = window.matchMedia(
-    "(min-width: 768px) and (max-width:1280px)"
-  );
-  const mediaQueryDesktop = window.matchMedia("(min-width:1281px)");
+
+  /** 네이빙 구별을 위해, 같은 값이여도 지정해놓았음 */
+  const breakpoints = {
+    mobile: 500,
+    tablet: 500,
+    desktop: 500,
+  };
+
+  /** 변경될 메인의 배경 색상 */
+  const colors = {
+    1: "#3496ca",
+    2: "#fbae04",
+    3: "#50be3e",
+    4: "#f26d60",
+    default: "#d9d6cc",
+  };
 
   /** handleScroll 함수에서 사용 할 코드: 배경의 색상을 변경하는 함수 */
   const setBackground = (color) => {
@@ -50,21 +70,48 @@ moreCloseBtn.forEach((btn) => {
   const handleScroll = () => {
     /** 현재 마우스의 위치를 알 수 있는 상수 */
     const currentScroll = document.documentElement.scrollTop;
+    let colorIndex = "default";
 
     /** 반응형 사이즈 체크후, 맞다면 하단의 실행문을 이행함 */
-    if (mediaQueryMobile.matches || mediaQueryTablet.matches) {
-      if (currentScroll >= 500 && currentScroll < 4000) {
-        setBackground("#3496ca");
-      } else if (currentScroll >= 4000 && currentScroll < 6400) {
-        setBackground("#fbae04");
-      } else if (currentScroll >= 6400 && currentScroll < 9100) {
-        setBackground("#50be3e");
-      } else if (currentScroll >= 9100) {
-        setBackground("#f26d60");
+    /** 모바일 */
+    if (currentScroll >= breakpoints.mobile) {
+      if (currentScroll < 4000) {
+        colorIndex = 1;
+      } else if (currentScroll < 6400) {
+        colorIndex = 2;
+      } else if (currentScroll < 9100) {
+        colorIndex = 3;
       } else {
-        setBackground("#d9d6cc");
+        colorIndex = 4;
       }
     }
+    /** 테블릿 */
+    if (currentScroll >= breakpoints.tablet) {
+      if (currentScroll < 3900) {
+        colorIndex = 1;
+      } else if (currentScroll < 6200) {
+        colorIndex = 2;
+      } else if (currentScroll < 8500) {
+        colorIndex = 3;
+      } else {
+        colorIndex = 4;
+      }
+    }
+    /** 데스크탑 */
+    if (currentScroll >= breakpoints.desktop) {
+      if (currentScroll < 4200) {
+        colorIndex = 1;
+      } else if (currentScroll < 6600) {
+        colorIndex = 2;
+      } else if (currentScroll < 9000) {
+        colorIndex = 3;
+      } else {
+        colorIndex = 4;
+      }
+    }
+
+    /** main의 배경 색상을 colorIndex 배열 순서대로 입력하는 코드 */
+    setBackground(colors[colorIndex]);
   };
 
   window.addEventListener("scroll", handleScroll);

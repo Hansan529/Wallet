@@ -309,6 +309,8 @@
 @media screen and (min-width: 1280px) {
   .payment__pay .more__wrap .more-main .payment__ico {
     float: left;
+    height: 100%;
+    margin-right: 50px;
   }
 }
 .payment__pay .more__wrap .more-main i {

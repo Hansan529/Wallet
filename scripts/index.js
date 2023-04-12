@@ -6,15 +6,19 @@ const mediaQueryTablet = window.matchMedia(
 const mediaQueryDesktop = window.matchMedia("(min-width:1281px)");
 const moreOpenBtn = document.querySelectorAll(".more__btn > button");
 const moreCloseBtn = document.querySelectorAll(".more__wrap > .close");
+const handlerAside = document.querySelector("aside.now");
 
 /** 사용법 버튼을 클릭하면 more__wrap이 fixed되며 화면 전체에 보여짐 */
 function moreOpen(e) {
   const parent = e.target.closest(".wrap");
   const moreWrap = parent.querySelector(".more__wrap");
+  const expressCard = document.querySelector(".transit__express .more__wrap");
   moreWrap.style.display = "block";
 
+  /* 테블릿과 데스크탑 버전에서는 flex로 */
   if (mediaQueryTablet.matches || mediaQueryDesktop.matches) {
     moreWrap.style.display = "flex";
+    expressCard.style.display = "block";
   }
 
   /* display:block과 동시에 실행되어 transition이 적용되지 않는 현상을 막기 위해 사용함 */

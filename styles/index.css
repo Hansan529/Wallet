@@ -346,13 +346,11 @@
 .payment__pay .more__wrap .more-main .ico__pay-app {
   background-position-y: -360px;
 }
-.payment__pay .more__wrap .more-main .contactless {
-  background-image: url("../images/ico_contactless.png");
-  width: 30px;
-  height: 30px;
-}
 .payment__pay .more__wrap .more-main .text-box {
   margin-bottom: 10px;
+}
+.payment__pay .more__wrap .more-main .text-box > p:first-child {
+  font-size: 20px;
 }
 @media screen and (min-width: 768px) {
   .payment__cash {

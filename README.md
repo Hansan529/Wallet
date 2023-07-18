@@ -28,7 +28,7 @@ Apple Wallet 을 소개하는 애플 홈페이지를 보고, 다음과 같이 �
 
 ### Developement
 
-![Html](https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html&logoColor=white)
+![Html](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Sass](https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![Javascript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 

@@ -34,10 +34,10 @@ Apple Wallet 을 소개하는 애플 홈페이지를 보고, 다음과 같이 �
 
 ## 화면 구성
 
-- Desktop
+- Desktop  
   ![img](https://github.com/Hansan529/Blog/assets/115819770/a7e9b753-593b-478c-8d22-f54ecb2d2d01)
 
-- Tablet
+- Tablet  
   ![img](https://github.com/Hansan529/Blog/assets/115819770/394bd0d1-516e-46a3-bf54-ee3fcb94b4c3)
 
 <br>
